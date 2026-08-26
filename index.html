@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orgulho de Ser SESI | Experiência Interativa</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        <i class="fas fa-shield-alt"></i>
+        Orgulho de Ser <span>SESI</span>
+    </div>
+
+    <div class="status-badge" id="system-status">
+        <i class="fas fa-lock"></i>
+        EXPERIÊNCIA EDUCATIVA
+    </div>
+
+</header>
+
+
+<main class="main-container">
+
+
+    <!-- CÂMERA -->
+
+    <section class="camera-card">
+
+        <div class="card-header">
+
+            <h2>
+                <i class="fas fa-camera"></i>
+                Experiência — Orgulho de Ser SESI
+            </h2>
+
+        </div>
+
+
+        <div class="video-wrapper">
+
+            <video
+                id="webcam"
+                autoplay
+                playsinline
+                muted
+                width="640"
+                height="480">
+            </video>
+
+            <div class="camera-overlay">
+
+                <div class="camera-message">
+                    <i class="fas fa-camera"></i>
+                    <span>Prepare-se para a foto</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="instructions">
+
+            <i class="fas fa-info-circle"></i>
+
+            Posicione seu rosto no centro da câmera e informe seu nome
+            para participar da experiência.
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PARTICIPANTE -->
+
+    <section class="info-card">
+
+        <div class="card-header">
+
+            <h2>
+
+                <i class="fas fa-user"></i>
+
+                Participante
+
+            </h2>
+
+        </div>
+
+
+        <div
+            class="result-box standby"
+            id="result-box">
+
+
+            <div
+                class="user-avatar"
+                id="user-avatar">
+
+                <i class="fas fa-user"></i>
+
+            </div>
+
+
+            <div class="user-name">
+
+                Digite seu nome
+
+            </div>
+
+
+            <input
+                type="text"
+                id="nomeVisitante"
+                placeholder="Seu nome completo"
+                autocomplete="off">
+
+
+            <button
+                id="btnExperiencia"
+                class="btn-primary">
+
+                <i class="fas fa-camera"></i>
+
+                Participar da Experiência
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+</body>
+
+</html>

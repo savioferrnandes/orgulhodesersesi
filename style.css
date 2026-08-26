@@ -1,0 +1,1278 @@
+/* =========================================================
+   ORGULHO DE SER SESI
+   EXPERIÊNCIA EDUCATIVA
+   SEGURANÇA NA INTERNET
+========================================================= */
+
+
+/* =========================================================
+   PALETA DE CORES
+========================================================= */
+
+:root{
+
+    --primary:#174092;
+    --secondary:#0c4d90;
+    --background:#0d1e4f;
+    --card:#102f78;
+
+    --accent:#fdc10b;
+    --success:#67b432;
+    --danger:#ff0406;
+    --warning:#faa810;
+
+    --green:#378c56;
+    --yellow:#fdc10b;
+    --red:#ff0406;
+    --orange:#faa810;
+    --blue:#174092;
+
+    --text:#ffffff;
+    --text-secondary:#f5eeb5;
+
+    --border:#2d5bb0;
+
+    --radius:15px;
+
+    --transition:.3s;
+
+}
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+========================================================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+
+body{
+
+    background:
+
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(253,193,11,.18),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(103,180,50,.15),
+            transparent 25%
+        ),
+
+        #0d1e4f;
+
+    color:var(--text);
+
+    min-height:100vh;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:#174092;
+
+    border-bottom:5px solid #fdc10b;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.3);
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:900;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+.logo i{
+
+    color:#fdc10b;
+
+}
+
+
+.logo span{
+
+    color:#fdc10b;
+
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.status-badge{
+
+    background:#67b432;
+
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:30px;
+
+    border:2px solid #fdc10b;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.2);
+
+}
+
+
+.status-badge i{
+
+    margin-right:6px;
+
+}
+
+
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
+
+.main-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:30px;
+
+    padding:40px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.camera-card,
+.info-card{
+
+    background:#102f78;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    border:2px solid #2d5bb0;
+
+    box-shadow:
+
+        0 0 30px rgba(0,0,0,.35);
+
+}
+
+
+.camera-card{
+
+    width:690px;
+
+}
+
+
+.info-card{
+
+    width:380px;
+
+}
+
+
+/* =========================================================
+   CABEÇALHO DOS CARDS
+========================================================= */
+
+.card-header{
+
+    padding:20px;
+
+    border-bottom:2px solid #2d5bb0;
+
+    background:#174092;
+
+}
+
+
+.card-header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    color:white;
+
+}
+
+
+.card-header i{
+
+    color:#fdc10b;
+
+}
+
+
+/* =========================================================
+   ÁREA DA CÂMERA
+========================================================= */
+
+.video-wrapper{
+
+    position:relative;
+
+    width:640px;
+
+    height:480px;
+
+    margin:20px auto;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    border:4px solid #fdc10b;
+
+    background:#000;
+
+    box-shadow:
+
+        0 0 25px rgba(23,64,146,.6);
+
+}
+
+
+video{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    left:0;
+
+    top:0;
+
+    object-fit:cover;
+
+    transform:scaleX(-1);
+
+}
+
+
+/* =========================================================
+   SOBREPOSIÇÃO DA CÂMERA
+========================================================= */
+
+.camera-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding-bottom:25px;
+
+    pointer-events:none;
+
+}
+
+
+.camera-message{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 20px;
+
+    background:rgba(23,64,146,.85);
+
+    border:2px solid #fdc10b;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(5px);
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+
+.camera-message i{
+
+    color:#fdc10b;
+
+}
+
+
+/* =========================================================
+   INSTRUÇÕES
+========================================================= */
+
+.instructions{
+
+    padding:20px;
+
+    text-align:center;
+
+    color:#f5eeb5;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+
+.instructions i{
+
+    color:#fdc10b;
+
+    margin-right:5px;
+
+}
+
+
+/* =========================================================
+   RESULTADO
+========================================================= */
+
+.result-box{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:18px;
+
+    animation:fadeIn .5s;
+
+}
+
+
+.user-avatar{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#174092;
+
+    border:4px solid #fdc10b;
+
+    color:#fdc10b;
+
+    font-size:50px;
+
+    animation:pulse 2s infinite;
+
+    box-shadow:
+
+        0 0 20px rgba(253,193,11,.25);
+
+}
+
+
+.user-name{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+#nomeVisitante{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:2px solid #2d5bb0;
+
+    background:#0d1e4f;
+
+    color:white;
+
+    font-size:17px;
+
+    transition:.3s;
+
+}
+
+
+#nomeVisitante::placeholder{
+
+    color:#cbd5e1;
+
+}
+
+
+#nomeVisitante:focus{
+
+    outline:none;
+
+    border-color:#fdc10b;
+
+    box-shadow:
+
+        0 0 15px rgba(253,193,11,.3);
+
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+========================================================= */
+
+.btn-primary{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #faa810,
+            #fdc10b
+        );
+
+    color:#174092;
+
+    font-size:17px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    box-shadow:
+
+        0 5px 15px rgba(253,193,11,.25);
+
+}
+
+
+.btn-primary:hover{
+
+    transform:translateY(-3px);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fdc10b,
+            #ffe06b
+        );
+
+    box-shadow:
+
+        0 10px 25px rgba(253,193,11,.4);
+
+}
+
+
+.btn-primary:active{
+
+    transform:scale(.98);
+
+}
+
+
+/* =========================================================
+   TEXTOS
+========================================================= */
+
+.result-box h2{
+
+    color:#fdc10b;
+
+    text-align:center;
+
+    line-height:1.4;
+
+}
+
+
+.result-box h3{
+
+    color:#fdc10b;
+
+    margin-top:15px;
+
+    text-align:center;
+
+}
+
+
+.result-box p{
+
+    text-align:center;
+
+    line-height:1.8;
+
+    color:#f5eeb5;
+
+}
+
+
+.result-box strong{
+
+    color:white;
+
+}
+
+
+.result-box hr{
+
+    width:100%;
+
+    border:1px solid #2d5bb0;
+
+    margin:20px 0;
+
+}
+
+
+/* =========================================================
+   LISTA
+========================================================= */
+
+.result-box ul{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding-left:20px;
+
+    text-align:left;
+
+}
+
+
+.result-box li{
+
+    margin:12px 0;
+
+    color:#f5eeb5;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================================================
+   DADOS DA SIMULAÇÃO
+========================================================= */
+
+.dados-simulacao{
+
+    width:100%;
+
+    padding:18px;
+
+    background:#0d1e4f;
+
+    border:2px solid #2d5bb0;
+
+    border-radius:10px;
+
+}
+
+
+.dados-simulacao p{
+
+    margin:6px 0;
+
+}
+
+
+.dados-simulacao strong{
+
+    color:white;
+
+}
+
+
+/* =========================================================
+   ALERTA DA SIMULAÇÃO
+========================================================= */
+
+#alertaSimulacao{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9999;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(2,6,23,.94);
+
+    backdrop-filter:blur(10px);
+
+    animation:entradaAlerta .3s ease;
+
+}
+
+
+/* =========================================================
+   CAIXA DO ALERTA
+========================================================= */
+
+.alerta-conteudo{
+
+    width:100%;
+
+    max-width:600px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #102f78,
+            #0d1e4f
+        );
+
+    border:4px solid #ff0406;
+
+    border-radius:20px;
+
+    box-shadow:
+
+        0 0 30px rgba(255,4,6,.6),
+
+        0 0 100px rgba(255,4,6,.25);
+
+}
+
+
+/* =========================================================
+   ÍCONE DO ALERTA
+========================================================= */
+
+.alerta-icone{
+
+    font-size:70px;
+
+    margin-bottom:10px;
+
+    animation:iconeAlerta .8s infinite;
+
+}
+
+
+/* =========================================================
+   TÍTULO DO ALERTA
+========================================================= */
+
+.alerta-titulo{
+
+    font-size:38px;
+
+    font-weight:900;
+
+    color:#ff0406;
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+
+    text-shadow:
+
+        0 0 15px rgba(255,4,6,.4);
+
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+========================================================= */
+
+.alerta-subtitulo{
+
+    font-size:21px;
+
+    color:white;
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =========================================================
+   NOME INFORMADO
+========================================================= */
+
+.alerta-destaque{
+
+    background:#0d1e4f;
+
+    border:2px solid #fdc10b;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    color:#f5eeb5;
+
+    margin-bottom:15px;
+
+}
+
+
+.alerta-destaque strong{
+
+    display:block;
+
+    color:#fdc10b;
+
+    font-size:22px;
+
+    margin-top:5px;
+
+}
+
+
+/* =========================================================
+   MENSAGEM DE PERIGO
+========================================================= */
+
+.alerta-mensagem{
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#fdc10b;
+
+    margin:20px 0;
+
+}
+
+
+/* =========================================================
+   MENSAGEM DE SEGURANÇA
+========================================================= */
+
+.alerta-seguranca{
+
+    padding:15px;
+
+    border-radius:10px;
+
+    background:#174092;
+
+    border:2px solid #67b432;
+
+    color:#b8e986;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =========================================================
+   BOTÃO DO ALERTA
+========================================================= */
+
+.btn-entendi{
+
+    width:100%;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#ff0406;
+
+    color:white;
+
+    font-size:19px;
+
+    font-weight:900;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    box-shadow:
+
+        0 5px 20px rgba(255,4,6,.3);
+
+}
+
+
+.btn-entendi:hover{
+
+    background:#d90000;
+
+    transform:scale(1.02);
+
+    box-shadow:
+
+        0 8px 25px rgba(255,4,6,.5);
+
+}
+
+
+/* =========================================================
+   ALERTA FECHANDO
+========================================================= */
+
+#alertaSimulacao.fechando{
+
+    animation:saidaAlerta .3s forwards;
+
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes entradaAlerta{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes saidaAlerta{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+
+@keyframes iconeAlerta{
+
+    0%,
+    100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — TABLET
+========================================================= */
+
+@media(max-width:1100px){
+
+    .main-container{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        padding:20px;
+
+    }
+
+
+    .camera-card{
+
+        width:100%;
+
+        max-width:690px;
+
+    }
+
+
+    .info-card{
+
+        width:100%;
+
+        max-width:500px;
+
+    }
+
+
+    .video-wrapper{
+
+        width:calc(100% - 30px);
+
+        height:auto;
+
+        aspect-ratio:4 / 3;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media(max-width:700px){
+
+    .header{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:20px;
+
+    }
+
+
+    .logo{
+
+        font-size:24px;
+
+        text-align:center;
+
+    }
+
+
+    .status-badge{
+
+        font-size:13px;
+
+    }
+
+
+    .card-header h2{
+
+        font-size:18px;
+
+    }
+
+
+    .user-avatar{
+
+        width:90px;
+
+        height:90px;
+
+        font-size:40px;
+
+    }
+
+
+    .user-name{
+
+        font-size:20px;
+
+    }
+
+
+    #nomeVisitante{
+
+        font-size:16px;
+
+    }
+
+
+    .btn-primary{
+
+        font-size:16px;
+
+    }
+
+
+    .instructions{
+
+        font-size:14px;
+
+    }
+
+
+    /* ALERTA NO CELULAR */
+
+    .alerta-conteudo{
+
+        padding:30px 20px;
+
+        max-height:90vh;
+
+        overflow-y:auto;
+
+    }
+
+
+    .alerta-icone{
+
+        font-size:55px;
+
+    }
+
+
+    .alerta-titulo{
+
+        font-size:28px;
+
+    }
+
+
+    .alerta-subtitulo{
+
+        font-size:18px;
+
+    }
+
+
+    .alerta-mensagem{
+
+        font-size:17px;
+
+    }
+
+
+    .alerta-seguranca{
+
+        font-size:14px;
+
+    }
+
+
+    .btn-entendi{
+
+        font-size:17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media(max-width:400px){
+
+    .main-container{
+
+        padding:10px;
+
+    }
+
+
+    .camera-card,
+    .info-card{
+
+        border-radius:10px;
+
+    }
+
+
+    .card-header{
+
+        padding:15px;
+
+    }
+
+
+    .result-box{
+
+        padding:25px 18px;
+
+    }
+
+
+    .alerta-conteudo{
+
+        padding:25px 15px;
+
+    }
+
+
+    .alerta-titulo{
+
+        font-size:25px;
+
+    }
+
+}
